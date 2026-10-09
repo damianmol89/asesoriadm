@@ -292,7 +292,48 @@
     font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--ink-faint);
   }
 
+
+  /* SISTEMAS */
+  .systems{border-top:1px solid var(--line); background:var(--bg2);}
+  .sys-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:48px;}
+  .sys-card{
+    background:var(--bg1); border:1px solid var(--line); border-radius:18px;
+    padding:32px 32px 28px; display:flex; flex-direction:column; gap:16px;
+    box-shadow:0 1px 3px rgba(15,30,56,0.04);
+    transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .sys-card:hover{border-color:var(--accent); transform:translateY(-3px); box-shadow:0 12px 28px rgba(15,30,56,0.08);}
+  .sys-icon{
+    width:44px;height:44px;border-radius:12px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);
+  }
+  .sys-icon svg{width:22px;height:22px;}
+  .sys-card h3{font-size:20px;font-weight:600;color:var(--ink);}
+  .sys-card > p{font-size:14.5px;line-height:1.6;color:var(--ink-soft);margin:0;}
+  .sys-list{list-style:none;margin:0;padding:0;}
+  .sys-list li{
+    position:relative; padding:12px 0 12px 22px; border-top:1px solid var(--line);
+    font-size:14.5px; line-height:1.55; color:var(--ink-soft);
+  }
+  .sys-list li::before{
+    content:""; position:absolute; left:2px; top:20px;
+    width:7px; height:7px; border-radius:50%; background:var(--accent);
+  }
+  .sys-list strong{color:var(--ink);font-weight:600;}
+  .sys-for{margin-top:auto; padding-top:16px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-faint);}
+  .sys-note{
+    margin-top:20px; background:var(--ink); color:#FFFFFF; border-radius:18px;
+    padding:26px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .sys-note p{margin:0; font-family:'Space Grotesk',system-ui,sans-serif; font-size:17px; font-weight:500; line-height:1.45; max-width:54ch;}
+  .sys-note a{
+    background:#FFFFFF; color:var(--accent-dark); text-decoration:none; font-weight:600; font-size:14.5px;
+    padding:13px 24px; border-radius:100px; white-space:nowrap;
+  }
+
   @media (max-width:860px){
+    .sys-grid{grid-template-columns:1fr;}
+    .sys-note{padding:24px;}
     .hero{min-height:560px;}
     .problem-grid{grid-template-columns:1fr;}
     .service-grid{grid-template-columns:1fr;}
@@ -393,6 +434,49 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="systems" id="sistemas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag mono">Sistemas y tecnología</div>
+      <h2>Que el sistema se adapte a tu operación, no al revés</h2>
+      <p>Elegir o construir un sistema sin criterio logístico sale caro y no se usa. Te acompaño desde la decisión hasta que tu equipo lo usa todos los días.</p>
+    </div>
+    <div class="sys-grid">
+
+      <div class="sys-card">
+        <div class="sys-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+        <h3>Acompañamiento en ERP / WMS</h3>
+        <p>Te ayudo a elegir, implementar y sacarle provecho a un sistema de gestión, mirándolo desde la operación y no desde la venta.</p>
+        <ul class="sys-list">
+          <li><strong>Antes de elegir:</strong> relevo qué necesita tu operación y armo los requisitos.</li>
+          <li><strong>Comparación independiente:</strong> evalúo opciones con criterio logístico. No vendo licencias.</li>
+          <li><strong>Implementación:</strong> circuitos, carga inicial de datos, pruebas y capacitación a tu equipo.</li>
+          <li><strong>Con el proveedor:</strong> hago de nexo entre tu equipo y quien instala el sistema.</li>
+        </ul>
+        <div class="sys-for">Para vos si estás evaluando un sistema, o ya lo compraste y no lo terminás de usar.</div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg></div>
+        <h3>Sistemas a medida</h3>
+        <p>Diseño con vos la solución a partir de tu operación y la desarrollamos junto a un equipo de programación. Hoy armar un sistema propio es más ágil y accesible que nunca.</p>
+        <ul class="sys-list">
+          <li><strong>Seguimiento de envíos:</strong> panel con el estado de cada pedido y un portal para que tus clientes lo consulten.</li>
+          <li><strong>App para choferes:</strong> hoja de ruta, confirmación de entrega con foto y registro de incidencias.</li>
+          <li><strong>Cotizador y costos:</strong> cálculo automático de fletes y tableros de costo por cliente, zona o ruta.</li>
+          <li><strong>Integraciones:</strong> conecto tu tienda online, tu ERP o tu facturación con la operación.</li>
+        </ul>
+        <div class="sys-for">Para vos si ningún sistema del mercado te cierra, o querés una herramienta propia que te diferencie.</div>
+      </div>
+
+    </div>
+    <div class="sys-note">
+      <p>Primero se ordena el proceso, después se elige o se arma el sistema, por etapas y empezando por lo que más duele. Así ayuda en vez de sumar trabajo.</p>
+      <a href="#contacto">Contame qué usás hoy</a>
     </div>
   </div>
 </section>
